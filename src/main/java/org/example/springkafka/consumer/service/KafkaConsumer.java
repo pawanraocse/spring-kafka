@@ -20,4 +20,9 @@ public class KafkaConsumer {
         payload = consumerRecord.toString();
     }
 
+    public void processMessage(ConsumerRecord<?, ?> consumerRecord) {
+        log.info("received payload='{}'", consumerRecord.toString());
+        payload = consumerRecord.toString();
+    }
+
 }
